@@ -1,0 +1,6 @@
+E:\BinaryStudio\BinaryTask2\BinaryTask2\bin\Debug\BinaryTask2.exe.config
+E:\BinaryStudio\BinaryTask2\BinaryTask2\bin\Debug\BinaryTask2.exe
+E:\BinaryStudio\BinaryTask2\BinaryTask2\bin\Debug\BinaryTask2.pdb
+E:\BinaryStudio\BinaryTask2\BinaryTask2\obj\Debug\BinaryTask2.csprojResolveAssemblyReference.cache
+E:\BinaryStudio\BinaryTask2\BinaryTask2\obj\Debug\BinaryTask2.exe
+E:\BinaryStudio\BinaryTask2\BinaryTask2\obj\Debug\BinaryTask2.pdb
