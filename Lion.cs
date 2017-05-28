@@ -4,16 +4,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BinaryTask2
+namespace BinaryTask2.ByMyself
 {
-   public class Lion : Animal
+    class Lion : Animal
     {
-       
-        public Lion(string name)
+
+        public Lion(string Alias)
         {
-            this.name = name;
-            this.health = 5;
-            Console.WriteLine("Lion" + name);
+            type = this.GetType().Name.ToString();
+            this.Alias = Alias;
+            StartHealth = 5;
+            CurrentHealth = StartHealth;
+            stage = Stage.Satisfied;
+        }
+        static Lion()
+        {
+            Console.WriteLine("Lion created");
         }
     }
 }
