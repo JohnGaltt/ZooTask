@@ -4,15 +4,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BinaryTask2
+namespace BinaryTask2.ByMyself
 {
-    public class Wolf : Animal
+   public class Wolf : Animal
     {
-      
-        public Wolf(string name)
+        
+        public Wolf(string Alias)
         {
-            this.name = name;
-            this.health = 4;
+            type = this.GetType().Name.ToString();
+            this.Alias = Alias;
+            StartHealth = 4;
+            CurrentHealth = StartHealth;
+            stage = Stage.Satisfied;
+            
+        }
+        static Wolf()
+        {
+            Console.WriteLine("Wolf created");
         }
     }
 }

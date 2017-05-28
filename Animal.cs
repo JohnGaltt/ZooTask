@@ -4,113 +4,63 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BinaryTask2
+namespace BinaryTask2.ByMyself
 {
-    public enum State
+   public enum Stage
     {
-        dead,
-        sick,
-        hungry,
-        satisfied
+        Dead,  
+        Sick,
+        Hungry,
+        Satisfied
     }
-    public class Animal 
+    public abstract class Animal
     {
-       public int GeneralHealth;
-       public int health;
-       public string name;
-       State state;
-        public Animal()
+        protected int StartHealth;
+        public int CurrentHealth;
+        public string Alias;
+        public Stage stage;
+        public string type;
+       
+        public void SatisfiedStage()
         {
-            this.State = State.satisfied;
+            stage = Stage.Satisfied;
+        }
+        public void WorsenStatus()
+        {
+            if(stage != Stage.Sick)
+            {
+                stage--;
+            }
+        }
+        public void DecreaseHealth()
+        {
+            if(stage == Stage.Sick && CurrentHealth !=0)
+            {
+                CurrentHealth--;
+            }
+            if(CurrentHealth == 0)
+            {
+                stage = Stage.Dead;
+            }
+        }
+        public void BetterStatus()
+        {
+            if(stage != Stage.Satisfied){
+                stage++;
+            }
+            Console.WriteLine(" " + this.GetType().Name + " " + this.Alias + "has better health");
         }
 
-        
-
-        public int Health
+        public void FeedAnimal()
         {
-            get
-            {
-                return health;
-            }
-
-            set
-            {
-                health = value;
-            }
+            this.stage = Stage.Satisfied;
+            Console.WriteLine(" " + this.GetType().Name + " " + this.Alias + "is well-fed");
         }
-
-        public State State
+        public void Show()
         {
-            get
-            {
-                return state;
-            }
-
-            set
-            {
-                state = value;
-            }
+            Console.WriteLine("Animal  {0} has {1} alias has {2} health and he is {3} ", this.GetType().Name,this.Alias,this.CurrentHealth,this.stage);
         }
-        
-
-        public static void Show(Animal animal)
-        {
-            Console.WriteLine("Animal {0} has {1} health is called {2} status {3}  ", animal.GetType().Name,animal.Health,animal.name, animal.state);
-        }
-        public static void Heal(string name, ref List<Animal> Zoo)
-        {
-            foreach (var n in Zoo)
-            {
-                if (n.name == name && n.health < n.GeneralHealth)
-                {
-                    n.health++;
-                }
-            }
-        }
-        public static void DeleteFromZoo(string name,ref List<Animal> deadanimals)
-        {
-            foreach(var n in deadanimals)
-            {
-                deadanimals.Remove(n);
-            }
-        }
-        public static void FeedAnimal(string name,ref List<Animal> Zoo)
-        {
-            
-        foreach(var n in Zoo)
-            {
-                if(n.name == name)
-                {
-                    n.state = State.satisfied;
-                }
-            }
-
-        }
-        public void DecreaseState()
-        {
-            if(state == State.sick)
-            {
-                Health--;
-                if(Health == 0)
-                {
-                    state = State.dead;
-                }
-            }
-            else
-            {
-                if(state > 0)
-                {
-                    state--;
-                }
-            }
-        }
-        public void IncreaseState()
-        {
-            if(Health < GeneralHealth)
-            {
-                Health++;
-            }
-        }
-        
+       
     }
+ 
 }

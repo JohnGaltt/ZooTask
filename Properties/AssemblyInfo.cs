@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("BinaryTask2")]
+[assembly: AssemblyTitle("BinaryTask2.ByMyself")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("BinaryTask2")]
+[assembly: AssemblyProduct("BinaryTask2.ByMyself")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("88afd818-2616-47ad-bdff-7ab2972c9438")]
+[assembly: Guid("8657ea82-4af3-42ed-8054-77cd354cd6b2")]
 
 // Version information for an assembly consists of the following four values:
 //
