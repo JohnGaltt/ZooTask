@@ -11,7 +11,8 @@ namespace BinaryTask2
         dead,
         sick,
         hungry,
-        satisfied
+        satisfied,
+        cool
     }
     public class Animal 
     {
