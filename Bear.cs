@@ -14,7 +14,7 @@ namespace BinaryTask2
             this.name = name;
             this.health = 6;
             Console.WriteLine("Bear" + name);
-
+        // hello
         }
     }
 }
